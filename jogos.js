@@ -63,7 +63,11 @@ for (const tipo of tipos) {
 
             const link = document.createElement("a");
             link.classList.add("game-link");
-            link.href = jogo.link; // Link do jogo
+            /*var url = new URL("iFrame_teste.html")
+            url.searchParams.set("J",jogo.link )*/
+            var url = encodeURIComponent(jogo.link)
+            
+            link.href = "iFrame_teste.html?J="+url; // Link do jogo
 
             const nomes = document.createElement("h3"); // Crie um elemento <h3> para o nome
             nomes.classList.add("game-name"); // Adicione a classe ao elemento <h3>
