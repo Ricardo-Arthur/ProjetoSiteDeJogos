@@ -34,7 +34,7 @@ var jogos = [
 
 
  
-const tipos = ["Ação", "Esportes", "Barbie", "Puzzles"];
+const tipos = ["Ação", "Esportes", "Puzzles"];
 
 const local = document.getElementById("local")
 
