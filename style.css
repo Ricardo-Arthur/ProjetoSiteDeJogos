@@ -80,23 +80,24 @@ li a:hover {
    
 }
 
+
 .imagensJogos{
     width: 85px;
     border-radius: 16px;
     margin: 7px;
     border: 3px solid black;
     cursor: pointer;
-   
-
 }
 
+button:hover{
+    scale: 1.1;
+}
 button{
     margin: 5px;
     background-color: #FFA500;
     border-radius: 15px;
     
 }
-
   /*--------------------------------------------------- Navbar entre outros */
 
 .bar {/*Icone verde linhas*/
@@ -162,7 +163,7 @@ footer {
     color: #fff;
     text-align: center;
     padding-top: 10px;
-
+    padding-bottom: 20px;
     margin: 1;
    
 }
@@ -253,7 +254,3 @@ footer {
     border-radius: 15px; 
     padding-top: -5px;
 }
-   
-
-
-
