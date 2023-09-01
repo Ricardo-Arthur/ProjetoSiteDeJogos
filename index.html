@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+
+<style>
+
+</style>
+<body>
+
+<script src="base.js"></script>
+
+<div class="item1"></div>
+
+<div class="item2"></div>
+
+
+<div class="item3">
+<div id="local"></div>
+<script src="jogos.js"></script>
+</div>  
+
+
+<div class="item4"> 
+    <img src="propaganda.png" style="width: 200px; height: 100%;">
+</div>
+    
+
+
+<script>
+const menuIcon = document.querySelector('.navbar-icon');
+const mobileMenu = document.querySelector('.mobile-menu');
+menuIcon.addEventListener('click', () => {
+mobileMenu.classList.toggle('open');
+});
+</script>
+
+</body>
+</html>

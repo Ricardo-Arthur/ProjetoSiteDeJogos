@@ -1,0 +1,251 @@
+.item1 { grid-area: header; height: max-content; text-align: center;}
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+.item4 { grid-area: right; width: max-content;}
+.item5 { grid-area: footer; }
+
+#sitedejogostxt{
+    color: #FFA500;
+    font-family: 'Arial', sans-serif; 
+    font-size: 41px; 
+    
+    -webkit-text-stroke: 1.5px black;
+    
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:
+    'header header header header header header'
+    'menu main main main main right'
+    'footer footer footer footer footer footer';
+    gap: 3px;
+    background-color: #b6e6fc;
+    height: 100vh;
+    margin: 0; /* Remove default margin */
+    grid-template-columns:1fr 1fr 1fr 1fr 1fr 0.5fr ;
+    grid-template-rows: 0.2fr 2fr 0.2fr;
+}
+
+ul {/*Nav bar lado esquerdo/aberto*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#ffa600;;
+    display: flex; /* Usar flexbox para centralizar */
+    justify-content: center; /* Centralizar horizontalmente */
+    text-align: center;
+    border-radius: 15px;
+    
+}
+        
+
+li {
+    float: left;
+    border-radius: 15px;
+}
+        
+li a {
+    display: block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+
+}
+        
+li a:hover {
+    background-color: #fd8a1e;
+    border-color: black; /* Defina a cor da borda no hover */
+    border-width: 2px; /* Aumente a largura da borda */
+    
+}
+
+#Jogos{
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: 36px; 
+    color: rgb(234, 126, 3);
+    margin: 10px; 
+    text-align: center; 
+    border: 1px solid rgb(0, 0, 0);
+    -webkit-text-stroke: 1.5px #000;
+    background-color: #FFA500;
+   
+}
+
+.imagensJogos{
+    width: 85px;
+    border-radius: 16px;
+    margin: 7px;
+    border: 3px solid black;
+    cursor: pointer;
+   
+
+}
+  /*--------------------------------------------------- Navbar entre outros */
+
+.bar {/*Icone verde linhas*/
+width: 25px;
+height: 4px;
+color: #ff0000;
+margin: 4px 0;
+background-color: rgb(0, 0, 0);
+
+}
+
+.mobile-menu {/*coluna dentro do icone*/
+display: none;
+position: absolute;
+left: 60px;
+top: 102px;
+background-color: #d60000;
+box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+z-index: 2;
+
+}
+
+  .navbar {/*todos*/
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    background-color: #ff8000;;
+    padding: 3px 16px;
+
+}
+.navbar-icon {/*ICONE*/
+    cursor: pointer;
+
+}
+
+
+
+
+
+.navbar-icon ul {
+list-style: none;
+flex-direction: column;
+
+
+}
+
+.mobile-menu.open {
+    display: block;
+}
+
+.navbar-links{
+    position: relative;
+    margin: auto;
+    
+   
+}
+.ule {/*deixando em formato de coluna dentro do icone*/
+    list-style: none;
+    flex-direction: column;
+}
+/*.............................................................. Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+
+    margin: 1;
+   
+}
+
+.social-buttons {
+    margin-top: 10px;
+}
+
+.social-buttons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #ff7700;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-buttons a:hover {
+    color: #ffaa33;
+}
+
+
+
+
+
+
+
+
+  .game-class {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            padding: 0;
+            border: 2px solid black;
+            border-radius: 8px;
+            background: #ffa600;
+        }
+
+        .class-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+            
+            width: 100%; /* Faz o título ocupar toda a largura */
+            text-align: center; /* Centraliza o texto */
+            background-color: #ff8000; /* Cor de fundo do título */
+            border-radius: 6px;
+            
+        }
+
+        .game-box {
+            width: 80px;
+            height: 120px;
+            margin: 5px;
+            padding: 15px;
+            border: 1px solid black;
+            text-align: center;
+            border-radius: 6px;
+        }
+
+        .game-image {
+            width: 70px;
+            height: 70px;
+        }
+
+        .game-link {
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+
+
+.game-name {
+    font-family: sans-serif;
+    color: #000000;
+    font-size: 15px;
+    
+    -webkit-text-stroke: 0.5px #ff8800;
+    box-shadow: 2px 2px 2px 2px #ff7300;
+    width: 80px;
+    /* Outros estilos que você deseja aplicar */
+}
+
+.card{
+
+    background-color: red; 
+    width: 300px; 
+    border-radius: 15px; 
+    padding-top: -5px;
+}
+   
+
+
+

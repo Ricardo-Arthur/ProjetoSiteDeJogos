@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+</head>
+<style>
+/* ====================================================================== */
+</style>
+<script src="base.js"></script>
+<body>
+
+<div class="item2">
+    <h2 id="Jogos">Jogos</h2>
+
+<button onclick="mudarIframe('https://play.famobi.com/wrapper/stack-smash/A1000-10')"> 
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/StackSmashTeaser.jpg" alt="Stack Smash">
+    </button>
+
+    <button onclick="mudarIframe('https://play.famobi.com/wrapper/om-nom-run/A1000-10')">
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/OmNomRunTeaser.jpg?v=0.2-c5b5b387" alt="On-Nom-Run">
+    </button>
+
+    <button onclick="mudarIframe('https://play.famobi.com/wrapper/peet-a-lock/A1000-10')"> 
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/PeetALockTeaser.jpg" alt="Peet A Lock">
+    </button>
+
+    <button onclick="mudarIframe('https://play.famobi.com/wrapper/cubito/A1000-10')"> 
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/CubitoTeaser.jpg" alt="Cubito">
+    </button>
+
+    <button onclick="mudarIframe('https://play.famobi.com/wrapper/color-tunnel/A1000-10')"> 
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/ColorTunnelTeaser.jpg" alt="Color Tunnel">
+    </button>
+
+    <button onclick="mudarIframe('https://play.famobi.com/wrapper/ramp/A1000-10')"> 
+        <img class="imagensJogos" src="https://img.cdn.famobi.com/portal/html5games/images/tmp/RampTeaser.jpg?v=0.2-f6c34466" alt="Ramp">
+    </button>
+</div>
+
+<div class="item3">
+    <iframe src="https://play.famobi.com/wrapper/element-blocks/A1000-10" style="width: 100%; height: 100%;" name="iframes"></iframe>
+</div>
+
+<div class="item4"> 
+    <img src="propaganda.png" style="width: 200px; height: 100%;">
+</div>
+
+<script>
+function mudarIframe(novaUrl) {
+    var url = new URL(window.location.href);
+    url.searchParams.set("J", novaUrl);
+    history.pushState(null, null, url);
+
+    var iframe = document.querySelector('iframe[name="iframes"]');
+    iframe.src = novaUrl;
+}
+
+// Lê o parâmetro J da URL ao carregar a página
+document.addEventListener("DOMContentLoaded", function() {
+    var url = new URL(window.location.href);
+    var novaUrl = url.searchParams.get("J");
+    if (novaUrl) {
+        var iframe = document.querySelector('iframe[name="iframes"]');
+        iframe.src = novaUrl;
+    }
+});
+</script>
+
+</body>
+</html>
